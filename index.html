@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EnStandard – Nordic SIRI Profile Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="assets/glossary-tooltip.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'EnStandard Nordic SIRI Profile',
+      repo: 'https://github.com/hfjelstad/Profile_Documentation_SIRI',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      search: {
+        placeholder: 'Search documentation...',
+        noData: 'No results found.',
+        depth: 6
+      },
+      relativePath: true,
+      auto2top: true,
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: 'classic'
+      }
+    };
+  </script>
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@2/dist/docsify-mermaid.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: false, theme: 'default' });
+  </script>
+  <!-- Glossary tooltip plugin (must load before Docsify core) -->
+  <script src="assets/docsify-glossary-tooltip.js"></script>
+  <!-- Docsify core -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Search plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <!-- Copy code button on all code blocks -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <!-- Tabs plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
+  <!-- Flexible alerts (> [!NOTE], > [!WARNING], > [!TIP]) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts@1"></script>
+</body>
+</html>
