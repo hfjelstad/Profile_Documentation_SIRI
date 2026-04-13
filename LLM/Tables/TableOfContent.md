@@ -7,6 +7,7 @@
 | Get Started | Introduction to SIRI and the Nordic Profile | [GetStarted_Guide.md](../../Guides/GetStarted/GetStarted_Guide.md) |
 | General Information | SIRI overview, terminology, and conventions | [GeneralInformation_Guide.md](../../Guides/GeneralInformation/GeneralInformation_Guide.md) |
 | Data Exchange | Communication patterns: Pub/Sub, Request/Response | [DataExchange_Guide.md](../../Guides/DataExchange/DataExchange_Guide.md) |
+| Parking & Accessibility | Implementing parking monitoring with SIRI-FM | [Parking_Implementation_Guide.md](../../Guides/Parking/Parking_Implementation_Guide.md) |
 | Glossary | Terminology and definitions | [Glossary.md](../../Guides/Glossary/Glossary.md) |
 
 ---
@@ -16,6 +17,7 @@
 | Service | Code | Description | Link |
 |---------|------|-------------|------|
 | Estimated Timetable | SIRI-ET | Real-time timetable updates | [Description](../../Services/SIRI-ET/Description_SIRI-ET.md) · [Table](../../Services/SIRI-ET/Table_SIRI-ET.md) |
+| Facility Monitoring | SIRI-FM | Facility status and accessibility updates | [Description](../../Services/SIRI-FM/Description_SIRI-FM.md) · [Table](../../Services/SIRI-FM/Table_SIRI-FM.md) |
 | Situation Exchange | SIRI-SX | Disruption and deviation messages | [Description](../../Services/SIRI-SX/Description_SIRI-SX.md) · [Table](../../Services/SIRI-SX/Table_SIRI-SX.md) |
 | Vehicle Monitoring | SIRI-VM | Vehicle position and progress | [Description](../../Services/SIRI-VM/Description_SIRI-VM.md) · [Table](../../Services/SIRI-VM/Table_SIRI-VM.md) |
 
