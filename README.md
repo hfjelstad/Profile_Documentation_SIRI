@@ -58,6 +58,7 @@ Each guide lives in its own folder under `Guides/`:
 | [GetStarted](Guides/GetStarted/GetStarted_Guide.md) | Minimal steps to begin working with the SIRI profile |
 | [GeneralInformation](Guides/GeneralInformation/GeneralInformation_Guide.md) | SIRI overview, the Nordic profile, and common conventions |
 | [DataExchange](Guides/DataExchange/DataExchange_Guide.md) | Communication patterns: Pub/Sub, Request/Response |
+| [Validation](Guides/Validation/Validation_Guide.md) | Validating SIRI XML against the official XSD |
 | [Glossary](Guides/Glossary/Glossary.md) | Terminology and definitions |
 
 ---

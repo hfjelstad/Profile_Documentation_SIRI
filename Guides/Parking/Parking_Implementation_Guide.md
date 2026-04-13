@@ -322,28 +322,23 @@ Ladestasjoner kan overvåkes som separate `FacilityCondition`-elementer, eller s
 
 ### AccessibilityAssessment på fasiliteten
 
-Beskriv den **normaltilstanden** for tilgjengelighet i `Facility`:
+Beskriv den **normaltilstanden** for tilgjengelighet i `Facility`.
+
+> [!IMPORTANT]
+> `AccessibilityAssessment` bruker ACSB-namespace (`http://www.ifopt.org.uk/acsb`). Child-elementer som `MobilityImpairedAccess`, `Limitations`, `AccessibilityLimitation`, `WheelchairAccess` og `StepFreeAccess` må ha ACSB-prefix.
 
 ```xml
-<Facility>
+<Facility xmlns:acsb="http://www.ifopt.org.uk/acsb">
     <FacilityCode>ENT:Facility:PARK-001</FacilityCode>
     <FacilityClass>parkingBay</FacilityClass>
     <AccessibilityAssessment>
-        <MobilityImpairedAccess>true</MobilityImpairedAccess>
-        <Limitations>
-            <Limitation>
-                <WheelchairAccess>true</WheelchairAccess>
-                <StepFreeAccess>true</StepFreeAccess>
-            </Limitation>
-        </Limitations>
-        <Suitabilities>
-            <Suitability>
-                <Suitable>suitable</Suitable>
-                <UserNeed>
-                    <!-- Definert iht. UserNeedStructure -->
-                </UserNeed>
-            </Suitability>
-        </Suitabilities>
+        <acsb:MobilityImpairedAccess>true</acsb:MobilityImpairedAccess>
+        <acsb:Limitations>
+            <acsb:AccessibilityLimitation>
+                <acsb:WheelchairAccess>true</acsb:WheelchairAccess>
+                <acsb:StepFreeAccess>true</acsb:StepFreeAccess>
+            </acsb:AccessibilityLimitation>
+        </acsb:Limitations>
     </AccessibilityAssessment>
 </Facility>
 ```
@@ -353,17 +348,17 @@ Beskriv den **normaltilstanden** for tilgjengelighet i `Facility`:
 Når en hendelse **endrer** tilgjengeligheten, beskriv oppdatert status i `FacilityStatus`:
 
 ```xml
-<FacilityStatus>
+<FacilityStatus xmlns:acsb="http://www.ifopt.org.uk/acsb">
     <Status>partiallyAvailable</Status>
     <Description xml:lang="no">HC-plasser utilgjengelige grunnet snøbrøyting</Description>
     <AccessibilityAssessment>
-        <MobilityImpairedAccess>false</MobilityImpairedAccess>
-        <Limitations>
-            <Limitation>
-                <WheelchairAccess>false</WheelchairAccess>
-                <StepFreeAccess>false</StepFreeAccess>
-            </Limitation>
-        </Limitations>
+        <acsb:MobilityImpairedAccess>false</acsb:MobilityImpairedAccess>
+        <acsb:Limitations>
+            <acsb:AccessibilityLimitation>
+                <acsb:WheelchairAccess>false</acsb:WheelchairAccess>
+                <acsb:StepFreeAccess>false</acsb:StepFreeAccess>
+            </acsb:AccessibilityLimitation>
+        </acsb:Limitations>
     </AccessibilityAssessment>
 </FacilityStatus>
 ```

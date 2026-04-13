@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Siri xmlns="http://www.siri.org.uk/siri" version="2.0">
+  <ServiceDelivery>
+    <ResponseTimestamp>2026-04-13T08:30:00+02:00</ResponseTimestamp>
+    <ProducerRef>ENT</ProducerRef>
+    <FacilityMonitoringDelivery version="2.0">
+      <ResponseTimestamp>2026-04-13T08:30:00+02:00</ResponseTimestamp>
+      <FacilityCondition>
+        <Facility>
+          <FacilityCode>ENT:Facility:PARK-001</FacilityCode>
+          <Description xml:lang="no">Innfartsparkering Helsfyr</Description>
+          <FacilityClass>parkingBay</FacilityClass>
+          <Features>
+            <Feature>
+              <ParkingFacility>parkAndRidePark</ParkingFacility>
+            </Feature>
+          </Features>
+          <FacilityLocation>
+            <StopPlaceRef>NSR:StopPlace:6442</StopPlaceRef>
+          </FacilityLocation>
+        </Facility>
+        <FacilityStatus>
+          <Status>partiallyAvailable</Status>
+        </FacilityStatus>
+        <MonitoredCounting>
+          <CountingType>availabilityCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <Count>23</Count>
+          <Trend>decreasing</Trend>
+        </MonitoredCounting>
+        <MonitoredCounting>
+          <CountingType>inUseCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <Count>177</Count>
+          <Trend>increasing</Trend>
+        </MonitoredCounting>
+        <MonitoringInfo>
+          <MonitoringInterval>PT5M</MonitoringInterval>
+          <MonitoringType>automatic</MonitoringType>
+        </MonitoringInfo>
+      </FacilityCondition>
+    </FacilityMonitoringDelivery>
+  </ServiceDelivery>
+</Siri>

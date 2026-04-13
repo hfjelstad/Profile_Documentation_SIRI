@@ -1,0 +1,19 @@
+name: Push (main) — SIRI XML Validation (Fail Fast)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.xml"
+
+jobs:
+  validate:
+    uses: ./.github/workflows/INT_SIRI_Validator.yml
+    with:
+      mode: push
+      checkout_ref: ${{ github.sha }}
+      before: ${{ github.event.before }}
+      after: ${{ github.sha }}
+      siri_xsd_version: "v2.2"
+      exclude_prefix: "siri-xsd/"
+      fail_fast: true

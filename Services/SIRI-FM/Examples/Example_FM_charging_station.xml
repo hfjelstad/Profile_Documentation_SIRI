@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Siri xmlns="http://www.siri.org.uk/siri" version="2.0">
+  <ServiceDelivery>
+    <ResponseTimestamp>2026-04-13T08:30:00+02:00</ResponseTimestamp>
+    <ProducerRef>ENT</ProducerRef>
+    <FacilityMonitoringDelivery version="2.0">
+      <ResponseTimestamp>2026-04-13T08:30:00+02:00</ResponseTimestamp>
+      <FacilityCondition>
+        <Facility>
+          <FacilityCode>ENT:Facility:CHARGE-001</FacilityCode>
+          <Description xml:lang="no">Hurtigladestasjon Helsfyr P-hus</Description>
+          <FacilityClass>fixedEquipment</FacilityClass>
+          <FacilityLocation>
+            <StopPlaceRef>NSR:StopPlace:6442</StopPlaceRef>
+          </FacilityLocation>
+        </Facility>
+        <FacilityStatus>
+          <Status>partiallyAvailable</Status>
+        </FacilityStatus>
+        <!-- Ledige ladepunkter -->
+        <MonitoredCounting>
+          <CountingType>availabilityCount</CountingType>
+          <CountedFeatureUnit>devices</CountedFeatureUnit>
+          <Count>4</Count>
+        </MonitoredCounting>
+        <!-- Ladepunkter i bruk -->
+        <MonitoredCounting>
+          <CountingType>inUseCount</CountingType>
+          <CountedFeatureUnit>devices</CountedFeatureUnit>
+          <Count>6</Count>
+        </MonitoredCounting>
+        <!-- Ute av drift -->
+        <MonitoredCounting>
+          <CountingType>outOfOrderCount</CountingType>
+          <CountedFeatureUnit>devices</CountedFeatureUnit>
+          <Count>2</Count>
+        </MonitoredCounting>
+      </FacilityCondition>
+    </FacilityMonitoringDelivery>
+  </ServiceDelivery>
+</Siri>

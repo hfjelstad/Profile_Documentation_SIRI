@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Siri xmlns="http://www.siri.org.uk/siri" version="2.0">
+  <ServiceDelivery>
+    <ResponseTimestamp>2026-04-13T10:00:00+02:00</ResponseTimestamp>
+    <ProducerRef>ENT</ProducerRef>
+    <EstimatedTimetableDelivery version="2.0">
+      <ResponseTimestamp>2026-04-13T10:00:00+02:00</ResponseTimestamp>
+      <EstimatedJourneyVersionFrame>
+        <RecordedAtTime>2026-04-13T10:00:00+02:00</RecordedAtTime>
+        <EstimatedVehicleJourney>
+          <LineRef>ENT:Line:1</LineRef>
+          <DirectionRef>inbound</DirectionRef>
+          <FramedVehicleJourneyRef>
+            <DataFrameRef>2026-04-13</DataFrameRef>
+            <DatedVehicleJourneyRef>ENT:ServiceJourney:1001</DatedVehicleJourneyRef>
+          </FramedVehicleJourneyRef>
+          <EstimatedCalls>
+            <EstimatedCall>
+              <StopPointRef>NSR:Quay:1234</StopPointRef>
+              <Order>1</Order>
+              <AimedDepartureTime>2026-04-13T10:05:00+02:00</AimedDepartureTime>
+              <ExpectedDepartureTime>2026-04-13T10:07:00+02:00</ExpectedDepartureTime>
+              <DepartureStatus>delayed</DepartureStatus>
+            </EstimatedCall>
+            <EstimatedCall>
+              <StopPointRef>NSR:Quay:5678</StopPointRef>
+              <Order>2</Order>
+              <AimedArrivalTime>2026-04-13T10:15:00+02:00</AimedArrivalTime>
+              <ExpectedArrivalTime>2026-04-13T10:17:00+02:00</ExpectedArrivalTime>
+              <ArrivalStatus>delayed</ArrivalStatus>
+            </EstimatedCall>
+          </EstimatedCalls>
+        </EstimatedVehicleJourney>
+      </EstimatedJourneyVersionFrame>
+    </EstimatedTimetableDelivery>
+  </ServiceDelivery>
+</Siri>

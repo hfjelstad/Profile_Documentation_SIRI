@@ -8,6 +8,7 @@
 | General Information | SIRI overview, terminology, and conventions | [GeneralInformation_Guide.md](../../Guides/GeneralInformation/GeneralInformation_Guide.md) |
 | Data Exchange | Communication patterns: Pub/Sub, Request/Response | [DataExchange_Guide.md](../../Guides/DataExchange/DataExchange_Guide.md) |
 | Parking & Accessibility | Implementing parking monitoring with SIRI-FM | [Parking_Implementation_Guide.md](../../Guides/Parking/Parking_Implementation_Guide.md) |
+| Validation | Validating SIRI XML against the official XSD | [Validation_Guide.md](../../Guides/Validation/Validation_Guide.md) |
 | Glossary | Terminology and definitions | [Glossary.md](../../Guides/Glossary/Glossary.md) |
 
 ---

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Siri xmlns="http://www.siri.org.uk/siri" version="2.0">
+  <ServiceDelivery>
+    <ResponseTimestamp>2026-04-13T08:30:00+02:00</ResponseTimestamp>
+    <ProducerRef>ENT</ProducerRef>
+    <FacilityMonitoringDelivery version="2.0">
+      <ResponseTimestamp>2026-04-13T08:30:00+02:00</ResponseTimestamp>
+      <FacilityCondition>
+        <FacilityRef>ENT:Facility:PARK-001</FacilityRef>
+        <FacilityStatus>
+          <Status>partiallyAvailable</Status>
+        </FacilityStatus>
+        <!-- Totalt ledige plasser -->
+        <MonitoredCounting>
+          <CountingType>availabilityCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <Count>23</Count>
+          <Trend>decreasing</Trend>
+          <Accuracy>95.0</Accuracy>
+        </MonitoredCounting>
+        <!-- Ledige HC-plasser -->
+        <MonitoredCounting>
+          <CountingType>availabilityCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <TypeOfCountedFeature>
+            <TypeOfValueCode>wheelchairBays</TypeOfValueCode>
+            <NameOfClass>ParkingBayType</NameOfClass>
+            <Name xml:lang="no">HC-plasser</Name>
+          </TypeOfCountedFeature>
+          <Count>3</Count>
+        </MonitoredCounting>
+        <!-- Ledige elbilplasser -->
+        <MonitoredCounting>
+          <CountingType>availabilityCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <TypeOfCountedFeature>
+            <TypeOfValueCode>evChargingBays</TypeOfValueCode>
+            <NameOfClass>ParkingBayType</NameOfClass>
+            <Name xml:lang="no">Elbilplasser med lading</Name>
+          </TypeOfCountedFeature>
+          <Count>8</Count>
+        </MonitoredCounting>
+      </FacilityCondition>
+    </FacilityMonitoringDelivery>
+  </ServiceDelivery>
+</Siri>
