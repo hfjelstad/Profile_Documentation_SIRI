@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Siri xmlns="http://www.siri.org.uk/siri"
+      xmlns:acsb="http://www.ifopt.org.uk/acsb"
+      version="2.0">
+  <ServiceDelivery>
+    <ResponseTimestamp>2026-04-13T07:45:00+02:00</ResponseTimestamp>
+    <ProducerRef>ENT</ProducerRef>
+
+    <FacilityMonitoringDelivery version="2.0">
+      <ResponseTimestamp>2026-04-13T07:45:00+02:00</ResponseTimestamp>
+
+      <!-- ====================================================== -->
+      <!-- Innfartsparkering Asker stasjon — overordnet status     -->
+      <!-- ====================================================== -->
+      <FacilityCondition>
+        <Facility>
+          <FacilityCode>NSR:Parking:411</FacilityCode>
+          <Description xml:lang="no">Innfartsparkering Asker stasjon</Description>
+          <FacilityClass>parkingBay</FacilityClass>
+          <Features>
+            <Feature>
+              <ParkingFacility>parkAndRidePark</ParkingFacility>
+            </Feature>
+          </Features>
+          <FacilityLocation>
+            <StopPlaceRef>NSR:StopPlace:418</StopPlaceRef>
+          </FacilityLocation>
+          <AccessibilityAssessment>
+            <acsb:MobilityImpairedAccess>true</acsb:MobilityImpairedAccess>
+            <acsb:Limitations>
+              <acsb:AccessibilityLimitation>
+                <acsb:WheelchairAccess>true</acsb:WheelchairAccess>
+                <acsb:StepFreeAccess>true</acsb:StepFreeAccess>
+              </acsb:AccessibilityLimitation>
+            </acsb:Limitations>
+          </AccessibilityAssessment>
+        </Facility>
+
+        <FacilityStatus>
+          <Status>partiallyAvailable</Status>
+          <Description xml:lang="no">Normal drift, begrenset kapasitet morgenrush</Description>
+        </FacilityStatus>
+
+        <!-- Totalt ledige plasser -->
+        <MonitoredCounting>
+          <CountingType>availabilityCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <Count>58</Count>
+          <Trend>decreasing</Trend>
+        </MonitoredCounting>
+
+        <!-- Plasser i bruk -->
+        <MonitoredCounting>
+          <CountingType>inUseCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <Count>412</Count>
+          <Trend>increasing</Trend>
+        </MonitoredCounting>
+
+        <!-- Plasser ute av drift -->
+        <MonitoredCounting>
+          <CountingType>outOfOrderCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <Count>3</Count>
+          <Trend>stable</Trend>
+        </MonitoredCounting>
+
+        <!-- Ledige HC-plasser -->
+        <MonitoredCounting>
+          <CountingType>availabilityCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <TypeOfCountedFeature>
+            <TypeOfValueCode>wheelchairBays</TypeOfValueCode>
+            <NameOfClass>ParkingBayType</NameOfClass>
+            <Name xml:lang="no">HC-plasser</Name>
+          </TypeOfCountedFeature>
+          <Count>2</Count>
+        </MonitoredCounting>
+
+        <!-- Ledige elbilplasser med lading -->
+        <MonitoredCounting>
+          <CountingType>availabilityCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <TypeOfCountedFeature>
+            <TypeOfValueCode>evChargingBays</TypeOfValueCode>
+            <NameOfClass>ParkingBayType</NameOfClass>
+            <Name xml:lang="no">Elbilplasser med lading</Name>
+          </TypeOfCountedFeature>
+          <Count>4</Count>
+        </MonitoredCounting>
+
+        <!-- Belegg i prosent -->
+        <MonitoredCounting>
+          <CountingType>presentCount</CountingType>
+          <CountedFeatureUnit>bays</CountedFeatureUnit>
+          <Percentage>87.7</Percentage>
+        </MonitoredCounting>
+
+        <MonitoringInfo>
+          <MonitoringInterval>PT5M</MonitoringInterval>
+          <MonitoringType>automatic</MonitoringType>
+        </MonitoringInfo>
+
+        <ValidityPeriod>
+          <StartTime>2026-04-13T07:45:00+02:00</StartTime>
+        </ValidityPeriod>
+      </FacilityCondition>
+
+    </FacilityMonitoringDelivery>
+  </ServiceDelivery>
+</Siri>
