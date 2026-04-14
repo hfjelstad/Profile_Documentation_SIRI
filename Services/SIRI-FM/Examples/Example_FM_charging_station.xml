@@ -8,7 +8,6 @@
       <FacilityCondition>
         <Facility>
           <FacilityCode>ENT:Facility:CHARGE-001</FacilityCode>
-          <Description xml:lang="no">Hurtigladestasjon Helsfyr P-hus</Description>
           <FacilityClass>fixedEquipment</FacilityClass>
           <FacilityLocation>
             <StopPlaceRef>NSR:StopPlace:6442</StopPlaceRef>

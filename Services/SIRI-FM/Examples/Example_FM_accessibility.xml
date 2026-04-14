@@ -23,7 +23,6 @@
         </Facility>
         <FacilityStatus>
           <Status>partiallyAvailable</Status>
-          <Description xml:lang="no">HC-plasser utilgjengelige grunnet snøbrøyting</Description>
           <AccessibilityAssessment>
             <acsb:MobilityImpairedAccess>false</acsb:MobilityImpairedAccess>
             <acsb:Limitations>

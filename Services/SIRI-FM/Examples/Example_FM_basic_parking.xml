@@ -8,7 +8,6 @@
       <FacilityCondition>
         <Facility>
           <FacilityCode>ENT:Facility:PARK-001</FacilityCode>
-          <Description xml:lang="no">Innfartsparkering Helsfyr</Description>
           <FacilityClass>parkingBay</FacilityClass>
           <Features>
             <Feature>

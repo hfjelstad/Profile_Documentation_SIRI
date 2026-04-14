@@ -15,7 +15,6 @@
       <FacilityCondition>
         <Facility>
           <FacilityCode>NSR:Parking:411</FacilityCode>
-          <Description xml:lang="no">Innfartsparkering Asker stasjon</Description>
           <FacilityClass>parkingBay</FacilityClass>
           <Features>
             <Feature>
@@ -38,7 +37,6 @@
 
         <FacilityStatus>
           <Status>partiallyAvailable</Status>
-          <Description xml:lang="no">Normal drift, begrenset kapasitet morgenrush</Description>
         </FacilityStatus>
 
         <!-- Totalt ledige plasser -->

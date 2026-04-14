@@ -9,14 +9,12 @@
         <FacilityRef>ENT:Facility:PARK-001</FacilityRef>
         <FacilityStatus>
           <Status>notAvailable</Status>
-          <Description xml:lang="no">Parkeringsanlegg stengt grunnet vannlekkasje</Description>
         </FacilityStatus>
         <SituationRef>
           <SituationSimpleRef>ENT:SituationNumber:98765</SituationSimpleRef>
         </SituationRef>
         <Remedy>
           <RemedyType>repair</RemedyType>
-          <Description xml:lang="no">Rørlegger er tilkalt, forventet gjenåpning i morgen</Description>
           <RemedyPeriod>
             <StartTime>2026-04-13T08:00:00+02:00</StartTime>
             <EndTime>2026-04-14T06:00:00+02:00</EndTime>
