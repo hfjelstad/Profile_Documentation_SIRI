@@ -21,6 +21,10 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix tm-commons:  <https://w3id.org/transmodel/commons#> .
+@prefix tm-journeys: <https://w3id.org/transmodel/journeys#> .
+@prefix tm-fac:      <https://w3id.org/transmodel/facilities#> .
+@prefix tm-org:      <https://w3id.org/transmodel/organisations#> .
 
 ## =================================================================
 ## PROFILE
@@ -37,54 +41,65 @@ profile:NordicSIRI a siri:Profile ;
 ## RELATIONSHIP TO NeTEx
 ## =================================================================
 ## SIRI provides real-time updates that REFERENCE planned NeTEx objects.
-## These are declared here as external concepts — not duplicated.
+## These are declared here as external references — the canonical
+## definitions live in the NeTEx ontology (netex-ontology.ttl).
+## Transmodel lineage is declared via skos:exactMatch/closeMatch.
 ## The NeTEx ontology lives in the Profile_Documentation_v2 repo.
 ## -----------------------------------------------------------------
 
-netex:Line a owl:Class ;
+netex:Line
     rdfs:label "Line (NeTEx)" ;
     skos:definition "Planned line — referenced by SIRI via LineRef" ;
-    siri:externalRepo "Profile_Documentation_v2" .
+    siri:externalRepo "Profile_Documentation_v2" ;
+    skos:exactMatch tm-journeys:Line .
 
-netex:Route a owl:Class ;
+netex:Route
     rdfs:label "Route (NeTEx)" ;
     skos:definition "Planned route — referenced by SIRI via RouteRef" ;
-    siri:externalRepo "Profile_Documentation_v2" .
+    siri:externalRepo "Profile_Documentation_v2" ;
+    skos:exactMatch tm-journeys:Route .
 
-netex:ServiceJourney a owl:Class ;
+netex:ServiceJourney
     rdfs:label "ServiceJourney (NeTEx)" ;
     skos:definition "Planned journey template — referenced by SIRI via DatedVehicleJourneyRef" ;
-    siri:externalRepo "Profile_Documentation_v2" .
+    siri:externalRepo "Profile_Documentation_v2" ;
+    skos:exactMatch tm-journeys:ServiceJourney .
 
-netex:JourneyPattern a owl:Class ;
+netex:JourneyPattern
     rdfs:label "JourneyPattern (NeTEx)" ;
     skos:definition "Planned stop sequence — referenced by SIRI via JourneyPatternRef" ;
-    siri:externalRepo "Profile_Documentation_v2" .
+    siri:externalRepo "Profile_Documentation_v2" ;
+    skos:exactMatch tm-journeys:JourneyPattern .
 
-netex:Operator a owl:Class ;
+netex:Operator
     rdfs:label "Operator (NeTEx)" ;
     skos:definition "Transport operator — referenced by SIRI via OperatorRef" ;
-    siri:externalRepo "Profile_Documentation_v2" .
+    siri:externalRepo "Profile_Documentation_v2" ;
+    skos:exactMatch tm-org:Operator .
 
-netex:Quay a owl:Class ;
+netex:Quay
     rdfs:label "Quay (NeTEx / NSR)" ;
     skos:definition "Physical boarding point — referenced by SIRI via StopPointRef" ;
-    siri:externalRepo "Profile_Documentation_v2" .
+    siri:externalRepo "Profile_Documentation_v2" ;
+    skos:exactMatch tm-fac:Quay .
 
-netex:StopPlace a owl:Class ;
+netex:StopPlace
     rdfs:label "StopPlace (NeTEx / NSR)" ;
     skos:definition "Physical stop location — referenced by SIRI-SX via StopPlaceRef and SIRI-FM via StopPlaceRef" ;
-    siri:externalRepo "Profile_Documentation_v2" .
+    siri:externalRepo "Profile_Documentation_v2" ;
+    skos:exactMatch tm-fac:StopPlace .
 
-netex:GroupOfLines a owl:Class ;
+netex:GroupOfLines
     rdfs:label "GroupOfLines / Network (NeTEx)" ;
     skos:definition "Logical line grouping — referenced by SIRI via GroupOfLinesRef / NetworkRef" ;
-    siri:externalRepo "Profile_Documentation_v2" .
+    siri:externalRepo "Profile_Documentation_v2" ;
+    skos:closeMatch tm-commons:GroupOfEntities .
 
-netex:DatedServiceJourney a owl:Class ;
+netex:DatedServiceJourney
     rdfs:label "DatedServiceJourney (NeTEx)" ;
     skos:definition "Journey instance on a specific date — linked via FramedVehicleJourneyRef" ;
-    siri:externalRepo "Profile_Documentation_v2" .
+    siri:externalRepo "Profile_Documentation_v2" ;
+    skos:exactMatch tm-journeys:DatedVehicleJourney .
 
 ## =================================================================
 ## DATA GOVERNANCE
@@ -1190,6 +1205,46 @@ siri:IFOPTNamespace a siri:XMLNamespace ;
     rdfs:label "IFOPT namespace (stop infrastructure)" ;
     siri:uri "http://www.ifopt.org.uk/ifopt" ;
     siri:prefix "ifopt" .
+
+## =================================================================
+## TRANSMODEL ALIGNMENT
+## =================================================================
+## SIRI concepts are rooted in the CEN Transmodel Reference Data Model.
+## These skos:exactMatch / skos:closeMatch triples establish the
+## conceptual lineage without creating hard owl:imports dependencies.
+## Transmodel ontology: https://w3id.org/transmodel/
+## -----------------------------------------------------------------
+
+## --- Real-time journey views ---
+
+siri:EstimatedVehicleJourney skos:closeMatch tm-journeys:MonitoredVehicleJourney ;
+    rdfs:seeAlso tm-journeys:VehicleJourney .
+
+siri:MonitoredVehicleJourney skos:closeMatch tm-journeys:MonitoredVehicleJourney ;
+    rdfs:seeAlso tm-journeys:VehicleJourney .
+
+## --- Accessibility ---
+
+siri:AccessibilityAssessment skos:exactMatch tm-fac:AccessibilityAssessment .
+siri:AccessibilityLimitation skos:exactMatch tm-fac:AccessibilityLimitation .
+
+## --- Facilities ---
+
+siri:Facility skos:broadMatch tm-fac:Facility .
+siri:FacilityCondition skos:closeMatch tm-fac:StatusOfEquipment .
+
+## --- Situations / Validity ---
+
+siri:ValidityPeriod skos:closeMatch tm-fac:ValidityCondition .
+
+## --- Vehicle modes ---
+
+siri:VehicleModeEnum skos:closeMatch tm-journeys:VehicleMode .
+
+## --- Stop infrastructure ---
+
+siri:AffectedStopPlace skos:closeMatch tm-fac:StopPlace .
+siri:AffectedStopPoint skos:closeMatch tm-journeys:ScheduledStopPoint .
 
 ## =================================================================
 ## END OF ONTOLOGY
